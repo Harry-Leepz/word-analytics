@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Warning from "./Warning";
 
+import { WARNING_MESSAGE } from "../constants";
+
 export default function TextArea({ textValue, setTextValue }) {
   const [warningText, setWarningText] = useState("");
 
@@ -9,7 +11,7 @@ export default function TextArea({ textValue, setTextValue }) {
 
     // Check if the input contains the string "<script>"
     if (textInput.includes("<script>")) {
-      setWarningText("Scripts are not allowed!");
+      setWarningText(WARNING_MESSAGE);
       textInput = textInput.replace("<script>", "");
     } else {
       setWarningText("");

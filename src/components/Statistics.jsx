@@ -1,5 +1,7 @@
 import Stat from "./Stat";
 
+import { textLabels } from "../constants";
+
 export default function Statistics({ stats }) {
   const {
     numberOfCharacters,
@@ -10,10 +12,10 @@ export default function Statistics({ stats }) {
 
   return (
     <section className='stats'>
-      <Stat text='Words' number={numberOfWords} />
-      <Stat text='Characters' number={numberOfCharacters} />
-      <Stat text='Instagram' number={numberOfInstagramCharsLeft} />
-      <Stat text='Facebook' number={numberOfFacebookCharsLeft} />
+      <Stat text={textLabels.words} number={numberOfWords} />
+      <Stat text={textLabels.characters} number={numberOfCharacters} />
+      <Stat text={textLabels.instagram} number={numberOfInstagramCharsLeft} />
+      <Stat text={textLabels.facebook} number={numberOfFacebookCharsLeft} />
     </section>
   );
 }
