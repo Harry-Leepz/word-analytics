@@ -1,11 +1,13 @@
 import Stat from "./Stat";
 
-export default function Statistics({
-  numberOfCharacters,
-  numberOfWords,
-  numberOfFacebookCharsLeft,
-  numberOfInstagramCharsLeft,
-}) {
+export default function Statistics({ stats }) {
+  const {
+    numberOfCharacters,
+    numberOfWords,
+    numberOfInstagramCharsLeft,
+    numberOfFacebookCharsLeft,
+  } = stats;
+
   return (
     <section className='stats'>
       <Stat text='Words' number={numberOfWords} />
