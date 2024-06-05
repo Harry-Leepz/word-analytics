@@ -12,6 +12,8 @@ export default function Container() {
     .trim()
     .split(/\s+/) // Split the text by one or more whitespace characters
     .filter((word) => word.match(/^[a-zA-Z0-9]+$/)).length; // Filter out non-alphanumeric sequences
+  const numberOfInstagramCharsLeft = 280 - numberOfCharacters;
+  const numberOfFacebookCharsLeft = 2200 - numberOfCharacters;
 
   return (
     <main className='container'>
@@ -19,6 +21,8 @@ export default function Container() {
       <Statistics
         numberOfCharacters={numberOfCharacters}
         numberOfWords={numberOfWords}
+        numberOfFacebookCharsLeft={numberOfFacebookCharsLeft}
+        numberOfInstagramCharsLeft={numberOfInstagramCharsLeft}
       />
     </main>
   );

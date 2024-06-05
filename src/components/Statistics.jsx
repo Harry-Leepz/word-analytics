@@ -1,11 +1,17 @@
 import Stat from "./Stat";
-export default function Statistics({ numberOfCharacters, numberOfWords }) {
+
+export default function Statistics({
+  numberOfCharacters,
+  numberOfWords,
+  numberOfFacebookCharsLeft,
+  numberOfInstagramCharsLeft,
+}) {
   return (
     <section className='stats'>
       <Stat text='Words' number={numberOfWords} />
       <Stat text='Characters' number={numberOfCharacters} />
-      <Stat text='Instagram' number={280} />
-      <Stat text='Facebook' number={2200} />
+      <Stat text='Instagram' number={numberOfInstagramCharsLeft} />
+      <Stat text='Facebook' number={numberOfFacebookCharsLeft} />
     </section>
   );
 }
